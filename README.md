@@ -13,6 +13,11 @@ the different threads with a pool of thread and UI thread control.
 
 The `Presentation` layer starts from `Presenters`, who communicates with a `View` from a UI component (fragments / activities).
 
+Screenshots
+-----------
+![Screencast Search](./art/movies_finder_search.png)
+![Screencast Movie Detail](./art/movies_finder_detail_view.png)
+
 Material design
 ---------------
 - Movies Finder uses a wide range of Material design widgets from the Design support library such as:
@@ -28,8 +33,8 @@ Features
 
 Limitations
 -----------
-- For some unexpected eason the material design library 23.2.1 is hidden the back arrow button,
-however, by clicking back button from your mobile you will achieve the same action.
+- For some unexpected reason the material design library 23.2.1 is hidden the back arrow button,
+at the detail view. However, by clicking back button from your mobile you will achieve the same action.
 
 SDK support
 ------------
