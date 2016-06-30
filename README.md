@@ -50,7 +50,8 @@ SDK support
 ------------
 Support SDKs from **15** to **23**
 
-# Disclosure - Libraries used
+# Disclosure - API used and Libraries used
+- [The Open Movie Database](http://www.omdbapi.com/)
 - [Dagger 2](http://google.github.io/dagger/) for Dependency Injection
 - [ButterKnife](http://jakewharton.github.io/butterknife/) v6.1.0 for Views Injection
 - [Retrofit](http://square.github.io/retrofit/) v1.6.1 for API requests
