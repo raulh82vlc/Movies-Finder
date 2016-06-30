@@ -7,7 +7,8 @@ import com.raulh82vlc.MoviesFinder.domain.models.MovieUI;
 import javax.inject.Inject;
 
 /**
- * Mapper conversion
+ * Mapper conversion from Movie model of the API to Movie model of the UI
+ * @author Raul Hernandez Lopez
  */
 @ActivityScope
 public class MovieDetailsModelDataMapper {
@@ -17,6 +18,9 @@ public class MovieDetailsModelDataMapper {
 
     }
 
+    /**
+     * Transforms a {@link Movie} into an {@link MovieUI}.
+     */
     public MovieUI transform(Movie movie) {
         MovieUI movieUI = new MovieUI();
         movieUI.setSynopsis(movie.getSynopsis());

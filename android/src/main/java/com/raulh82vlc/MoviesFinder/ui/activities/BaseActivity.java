@@ -27,7 +27,6 @@ import com.raulh82vlc.MoviesFinder.R;
 import butterknife.InjectView;
 import butterknife.Optional;
 
-
 /**
  * Base Activity for all Activities
  * @author Raul Hernandez Lopez

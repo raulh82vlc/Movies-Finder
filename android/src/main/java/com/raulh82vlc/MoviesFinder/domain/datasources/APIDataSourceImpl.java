@@ -21,6 +21,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import com.raulh82vlc.MoviesFinder.R;
 import com.raulh82vlc.MoviesFinder.domain.api.WebServicesApiCallsImpl;
 import com.raulh82vlc.MoviesFinder.domain.models.Movie;
 import com.raulh82vlc.MoviesFinder.domain.models.SearchJSONResults;
@@ -53,7 +54,7 @@ public class APIDataSourceImpl implements APIDataSource {
 
     @Override
     public SearchJSONResults getMoviesList(String query) throws InternetConnectionException {
-        return startRecipeFromListRequest(query);
+        return startMovieFromListRequest(query);
     }
 
     @Override
@@ -75,7 +76,7 @@ public class APIDataSourceImpl implements APIDataSource {
                 throw new InternetConnectionException(e.getMessage());
             }
         } else {
-            throw new InternetConnectionException(mContext.getString(com.raulh82vlc.MoviesFinder.R.string.internet_connection_error));
+            throw new InternetConnectionException(mContext.getString(R.string.internet_connection_error));
         }
     }
 
@@ -85,7 +86,7 @@ public class APIDataSourceImpl implements APIDataSource {
      * @return Search results
      * @throws InternetConnectionException
      */
-    private SearchJSONResults startRecipeFromListRequest(String query) throws InternetConnectionException {
+    private SearchJSONResults startMovieFromListRequest(String query) throws InternetConnectionException {
         if (isThereInternetConnection(mContext)) {
             try {
                 return mWebServicesApiCallsImpl.getMoviesList(query);
@@ -93,12 +94,12 @@ public class APIDataSourceImpl implements APIDataSource {
                 throw new InternetConnectionException(e.getMessage());
             }
         } else {
-            throw new InternetConnectionException(mContext.getString(com.raulh82vlc.MoviesFinder.R.string.internet_connection_error));
+            throw new InternetConnectionException(mContext.getString(R.string.internet_connection_error));
         }
     }
 
     /**
-     * Checks if There is Internet connection
+     * Checks if there is Internet connection
      *
      * @param context {@link Context}
      * @return true or false

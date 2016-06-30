@@ -1,21 +1,25 @@
 # Movies Finder
-Movies Finder in combination with Material design can be aligned with *Clean architecture* with *Model-View-Presenter (MVP)*.
+Movies Finder in combination with Material design can be aligned with *Clean architecture* by means of *Model-View-Presenter (MVP)*.
 
-It is decoupled between `android` and `domain`.
+At this open-source project it is decoupled between `android` and `domain` modules or high level layers.
 
-But inside the android module, there are some good practices used.
+This means, `android` is strongly coupled with the Android framework and `domain` is decoupled from it, and can be re-used for other purposes when
+required as is purely Java based, but not framework coupled.
 
-There is an implementation of the *repository pattern* with a datasource (it could be extended to have a cache datasource in the future).
-- the existing one is: API Rest Services data source
+Inside the those modules, there are some good practices being employed, for instance:
+- There is an implementation of the *repository pattern* with a datasource (it could be extended to have a cache datasource in the future).
+The existing one is an API Rest Services data source
 
-Moreover, by means of synchronised requests to the API, using `Retrofit` for this purpose for properly handling 
+Moreover, by means of *synchronised requests* to the API, using `Retrofit` for this purpose and properly handling 
 the different requests on threads with a pool of threads which passes their use cases result.
 
-# Architecture design
+# Architecture design overview
 The exchange between the different *layers* is as follows:
-- **Repository layer**: 1) from the *data source* to the *Repository* (repository is the responsible of managing from 1 to n datasources) 2) from the *Repository* to their associated *Interactor* (or use case)
-- **Interactor layer**: from the *Interactor*, , which are responsible of the business logic to the *Presenter*
-- **Presenter layer**: from the *Presenter*, which provides the final formatted info to the passive `View` from a UI element (fragments / activities). Finally, this information would be passed through the UI thread.
+- **Repository layer**:
+1. from the models coming from a concrete *data source* to the *Repository* (repository is the responsible of managing from 1 to n datasources)
+2. from the *Repository* to their associated *Interactor* (or use case)
+- **Interactor layer**: from the *Interactor*, which is responsible of the *business logic* to the *Presenter*
+- **Presenter layer**: from the *Presenter*, which provides the final formatted info to a passive `View` from a UI element (fragments / activities). Finally, this information would be passed through the UI thread
 
 Screenshots
 -----------
@@ -48,22 +52,22 @@ Support SDKs from **15** to **23**
 
 # Disclosure - Libraries used
 - [Dagger 2](http://google.github.io/dagger/) for Dependency Injection
-- [ButterKnife](http://jakewharton.github.io/butterknife/) v6.1.0 or Views Injection
+- [ButterKnife](http://jakewharton.github.io/butterknife/) v6.1.0 for Views Injection
 - [Retrofit](http://square.github.io/retrofit/) v1.6.1 for API requests
 - [Glide](https://github.com/bumptech/glide) v3.6.0 for Image rendering
 
 # References (special thanks)
-- [Uncle Bob: The Clean Architecture](https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-- [The Repository pattern](https://msdn.microsoft.com/en-us/library/ff649690.aspx)
-- [Effective Android UI](https://github.com/pedrovgs/EffectiveAndroidUI)
-- [Android Clean Architecture](https://github.com/android10/Android-CleanArchitecture)
+- [Uncle Bob: The Clean Architecture](https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html) by Uncle Bob
+- [The Repository pattern](https://msdn.microsoft.com/en-us/library/ff649690.aspx) by Microsoft
+- [Effective Android UI](https://github.com/pedrovgs/EffectiveAndroidUI) by Pedro Gomez
+- [Android Clean Architecture](https://github.com/android10/Android-CleanArchitecture) by Fernando Cejas
 
 About the author
 ----------------
 **Raul Hernandez Lopez**
 in June 2016
-**@RaulHernandezL**
-**raul.h82@gmail.com**
+- **@RaulHernandezL**
+- **raul.h82@gmail.com**
 
 License
 ---------

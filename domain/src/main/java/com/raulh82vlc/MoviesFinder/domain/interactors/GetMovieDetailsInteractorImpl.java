@@ -27,7 +27,7 @@ import com.raulh82vlc.MoviesFinder.domain.repository.MoviesFinderRepository;
 import javax.inject.Inject;
 
 /**
- * Implementation of the Get specific details of a recipe
+ * Implementation of the Get specific details of a movie
  *
  * @author Raul Hernandez Lopez
  */
@@ -65,7 +65,7 @@ public class GetMovieDetailsInteractorImpl implements GetMovieDetailsInteractor,
         try {
             Movie movie = repository.getMovie(id);
             if (movie != null) {
-                notifyRecipeDetailProcessed(movie);
+                notifyMovieDetailProcessed(movie);
             } else {
                 notifyError(errorMessage);
             }
@@ -76,9 +76,9 @@ public class GetMovieDetailsInteractorImpl implements GetMovieDetailsInteractor,
     }
 
     /**
-     * <p>Notifies to the UI (main) thread the corresponding callback with a corresponding recipe detail</p>
+     * <p>Notifies to the UI (main) thread the corresponding callback with a corresponding movie detail</p>
      */
-    private void notifyRecipeDetailProcessed(final Movie movie) {
+    private void notifyMovieDetailProcessed(final Movie movie) {
         mainThread.post(new Runnable() {
             @Override
             public void run() {
@@ -88,9 +88,7 @@ public class GetMovieDetailsInteractorImpl implements GetMovieDetailsInteractor,
     }
 
     /**
-     * notifyError
-     * is the helper which notifies to the UI (main) thread
-     * that an error has happened
+     * <p>Notifies to the UI (main) thread that an error has happened</p>
      */
     private void notifyError(final String error) {
         mainThread.post(new Runnable() {
