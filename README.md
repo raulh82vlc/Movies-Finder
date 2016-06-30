@@ -1,17 +1,21 @@
 # Movies Finder
------------------
 Movies Finder in combination with Material design can be aligned with *Clean architecture* with *Model-View-Presenter (MVP)*.
 
 It is decoupled between `android` and `domain`.
 
-But inside the android module, there are some good practices:
+But inside the android module, there are some good practices used.
 
-An implementation of the *repository pattern* with a datasource (it could be extended to have a cache datasource in the future).
+There is an implementation of the *repository pattern* with a datasource (it could be extended to have a cache datasource in the future).
 - the existing one is: API Rest Services data source
-By means of synchronised requests to the API (`Retrofit) by handling properly
-the different threads with a pool of thread and UI thread control.
 
-The `Presentation` layer starts from `Presenters`, who communicates with a `View` from a UI component (fragments / activities).
+Moreover, by means of synchronised requests to the API, using `Retrofit` for this purpose for properly handling 
+the different requests on threads with a pool of threads which passes their use cases result.
+
+# Architecture design
+The exchange between the different *layers* is as follows:
+- **Repository layer**: 1) from the *data source* to the *Repository* (repository is the responsible of managing from 1 to n datasources) 2) from the *Repository* to their associated *Interactor* (or use case)
+- **Interactor layer**: from the *Interactor*, , which are responsible of the business logic to the *Presenter*
+- **Presenter layer**: from the *Presenter*, which provides the final formatted info to the passive `View` from a UI element (fragments / activities). Finally, this information would be passed through the UI thread.
 
 Screenshots
 -----------
@@ -26,9 +30,11 @@ Material design
 
 Features
 --------
-- Search for a movie when a user submits a query, then a list of search results will be displayed with a thumbnail image and title if found any
+- Search for a movie when a user submits a query, then a list of search results will be displayed with a thumbnail
+image and title if found any
 - Error handling integrated for Internet connection issues or if 0 results achieved
-- Once clicked an item, the detail view of an item is shown, which shows all the specific information such as: authors, PEG, year, ranking, votes, etc
+- Once clicked an item, the detail view of an item is shown, which shows all the specific information such as: authors,
+PEG, year, ranking, votes, etc
 - A secret link is hidden after the *Author* field of every specific item (it launches a link)
 
 Limitations
@@ -40,32 +46,26 @@ SDK support
 ------------
 Support SDKs from **15** to **23**
 
-Disclosure - Libraries used (special thanks)
---------------------------------------------
-- **Dagger 2** for Dependency Injection
-http://google.github.io/dagger/
-- **ButterKnife 6.1.0** for Views Injection
-http://jakewharton.github.io/butterknife/
-- **Retrofit 1.6.1** for API requests
-http://square.github.io/retrofit/
-- **Glide 3.6.0** for Image rendering
-https://github.com/bumptech/glide
+# Disclosure - Libraries used
+- [Dagger 2](http://google.github.io/dagger/) for Dependency Injection
+- [ButterKnife](http://jakewharton.github.io/butterknife/) v6.1.0 or Views Injection
+- [Retrofit](http://square.github.io/retrofit/) v1.6.1 for API requests
+- [Glide](https://github.com/bumptech/glide) v3.6.0 for Image rendering
 
+# References (special thanks)
+- [Uncle Bob: The Clean Architecture](https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- [The Repository pattern](https://msdn.microsoft.com/en-us/library/ff649690.aspx)
+- [Effective Android UI](https://github.com/pedrovgs/EffectiveAndroidUI)
+- [Android Clean Architecture](https://github.com/android10/Android-CleanArchitecture)
 
-Created by
-----------
+About the author
+----------------
 **Raul Hernandez Lopez**
 in June 2016
-
-TW
----
 **@RaulHernandezL**
-
-email
------
 **raul.h82@gmail.com**
 
-Copyright
+License
 ---------
 ```
 Copyright (C) 2016 Raul Hernandez Lopez
