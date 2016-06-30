@@ -1,10 +1,9 @@
 Contributing
-============
-
+-----------
 Firstly, I would like to thank you to those who wish to contribute to this open source project.
 
-If you would like to contribute code to this repository you can make it by opening an issue or
-forking the repository and making a pull request on GitHub.
+If you would like to contribute code to this repository you can make it by opening an issue
+describing the problem that you would like to be resolved or forking the repository and making a pull request on GitHub.
 
 Be aware this project is at a very first beta version and may be extended at any time, so please,
 rebase the code accordingly to latest changes and try to make a single commit which fits with the
