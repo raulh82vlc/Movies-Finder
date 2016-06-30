@@ -24,9 +24,7 @@ import com.raulh82vlc.MoviesFinder.domain.executors.MainThread;
 import javax.inject.Inject;
 
 /**
- * {@link MainThread} implementation
- * this would make
- * Interactor Callbacks able to get executed through
+ * {@link MainThread} implementation, this would make Interactor Callbacks able to get executed through
  * the Android UI thread
  *
  * @author Raul Hernandez Lopez

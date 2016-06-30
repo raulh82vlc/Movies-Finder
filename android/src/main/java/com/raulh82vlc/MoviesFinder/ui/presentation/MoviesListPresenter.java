@@ -22,7 +22,7 @@ import java.util.List;
 
 /**
  *
- * Responsible of passing Cat List result to the View
+ * Responsible of passing Movies List result to the View
  *
  * @author Raul Hernandez Lopez
  */

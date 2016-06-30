@@ -2,6 +2,8 @@ package com.raulh82vlc.MoviesFinder.domain.models;
 
 /**
  * Movie adapted to UI needs
+ *
+ * @author Raul Hernandez Lopez
  */
 public class MovieUI {
 

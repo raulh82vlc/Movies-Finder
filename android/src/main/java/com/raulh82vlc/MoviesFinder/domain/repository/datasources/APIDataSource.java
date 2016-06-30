@@ -35,8 +35,8 @@ public interface APIDataSource {
     SearchJSONResults getMoviesList(String query) throws InternetConnectionException;
 
     /**
-     * Gets a Recipe from the API
-     * @param id identifier of the recipe
+     * Gets a Movie from the API
+     * @param id identifier of the movie
      */
     Movie getMovieDetail(String id) throws InternetConnectionException;
 }

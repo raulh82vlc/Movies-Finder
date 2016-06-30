@@ -7,7 +7,7 @@ import android.widget.ImageView;
  */
 public interface ImageRendering {
     /**
-     * loadImage
+     * load an image
      *
      * @param urlPath path of the image from the API
      * @param img     ImageView where to render

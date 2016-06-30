@@ -17,7 +17,7 @@
 package com.raulh82vlc.MoviesFinder.domain.exceptions;
 
 /**
- * Internet Connection specific expection
+ * Internet Connection specific exception
  *
  * @author Raul Hernandez Lopez
  */

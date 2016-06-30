@@ -40,31 +40,30 @@ public class MoviesListModelDataMapper {
     }
 
     /**
-     * Transform a Collection of {@link SearchJSONResults} into a Collection of {@link SearchJSONResults}.
+     * Transforms a Collection of {@link SearchJSONResults} into a Collection of {@link SearchJSONResults}.
      *
      * @param searchJSONResults Objects to be transformed.
      * @return List of {@link MovieFromListUI}.
      */
     public List<MovieFromListUI> transform(SearchJSONResults searchJSONResults) {
-        List<MovieFromListUI> moviesUIList;
         if (searchJSONResults != null) {
             List<SearchJSONResults.SearchJSONEntity> searchList = searchJSONResults.getSearchList();
             if (searchList != null && !searchList.isEmpty()) {
-                moviesUIList = new ArrayList<>();
+                List<MovieFromListUI> moviesUIList = new ArrayList<>();
                 for (SearchJSONResults.SearchJSONEntity searchItem : searchJSONResults.getSearchList()) {
                     moviesUIList.add(transform(searchItem));
                 }
+                return moviesUIList;
             } else {
                 return Collections.emptyList();
             }
         } else {
             return Collections.emptyList();
         }
-        return moviesUIList;
     }
 
     /**
-     * Transform a {@link SearchJSONResults.SearchJSONEntity} into an {@link MovieFromListUI}.
+     * Transforms a {@link SearchJSONResults.SearchJSONEntity} into an {@link MovieFromListUI}.
      *
      * @param searchItem Object to be transformed.
      * @return {@link MovieFromListUI}.

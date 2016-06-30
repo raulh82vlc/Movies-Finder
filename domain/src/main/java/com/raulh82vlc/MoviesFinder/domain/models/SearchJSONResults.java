@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 /**
- * Recipe domain model coming from API
+ * Movie domain model coming from API
  */
 public class SearchJSONResults {
 

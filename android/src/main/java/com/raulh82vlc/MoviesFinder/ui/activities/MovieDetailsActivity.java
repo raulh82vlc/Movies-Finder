@@ -28,7 +28,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -57,8 +56,7 @@ import butterknife.InjectView;
  *
  * @author Raul Hernandez Lopez
  */
-public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPresenter.View{
-
+public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPresenter.View {
     // UI Injections
     @InjectView(R.id.title_txt)
     TextView mTitleTxt;
@@ -209,6 +207,23 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
 
     @Override
     public void loadMovieDetails(MovieUI movie) {
+        setDetails(movie);
+        setClickListener();
+
+    }
+
+    private void setClickListener() {
+        mDirectorLabelLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(getString(R.string.link)));
+                startActivity(i);
+            }
+        });
+    }
+
+    private void setDetails(MovieUI movie) {
         mSynopsisTxt.setText(movie.getSynopsis());
         mRatingTxt.setText(movie.getRating());
         String template = getString(R.string.format_votes_sketch);
@@ -218,19 +233,10 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
         mAwardsTxt.setText(movie.getAwards());
         mDurationTxt.setText(movie.getDuration());
         mDirectorTxt.setText(movie.getDirector());
-        mDirectorLabelLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(getString(R.string.link)));
-                startActivity(i);
-            }
-        });
-
     }
 
     @Override
     public void errorGettingMovieDetails(String error) {
-
+        Toast.makeText(this, error, Toast.LENGTH_SHORT).show();
     }
 }

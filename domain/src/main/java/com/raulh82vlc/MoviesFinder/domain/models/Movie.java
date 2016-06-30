@@ -3,7 +3,7 @@ package com.raulh82vlc.MoviesFinder.domain.models;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Movie domain model coming from the API
+ * Movie detail domain model coming from the API
  */
 public class Movie {
     @SerializedName("Genre")

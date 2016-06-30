@@ -25,7 +25,7 @@ import com.raulh82vlc.MoviesFinder.domain.repository.MoviesFinderRepository;
 import javax.inject.Inject;
 
 /**
- * Implementation of the Get Recipes List Interactor
+ * Implementation of the Get Movies List Interactor
  *
  * @author Raul Hernandez Lopez
  */

@@ -28,7 +28,7 @@ import butterknife.InjectView;
 
 /**
  *
- * Cat Item View Holder
+ * Movie Item View Holder
  * @author Raul Hernandez Lopez
  */
 
