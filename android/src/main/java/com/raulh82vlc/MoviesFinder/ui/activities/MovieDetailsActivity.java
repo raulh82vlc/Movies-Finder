@@ -147,6 +147,7 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
             setMaterialEffect();
             getMoreDetails();
         }
+        setToolbarInitialisation();
     }
 
     private void getMoreDetails() {
@@ -190,13 +191,20 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
 
     @Override
     protected void setToolbarInitialisation() {
-        mToolbar.setNavigationIcon(R.drawable.ic_back);
+        //mToolbar.setNavigationIcon(R.drawable.ic_back);
         setSupportActionBar(mToolbar);
-        final ActionBar actionBar = getSupportActionBar();
 
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
         }
+
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
