@@ -19,10 +19,11 @@ import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException
 
 /**
  * This contract does the interactor's execution behaviour.
- * <p/>
+ * <p>
  * By means of this, other entities can implement this
  * and react like an interactor executor and its logic.
- * <p/>
+ * <p>
+ *
  * @author Raul Hernandez Lopez
  */
 public interface InteractorExecutor {

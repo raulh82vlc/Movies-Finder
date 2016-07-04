@@ -23,7 +23,6 @@ import com.raulh82vlc.MoviesFinder.domain.executors.MainThread;
 import com.raulh82vlc.MoviesFinder.domain.models.Movie;
 import com.raulh82vlc.MoviesFinder.domain.repository.MoviesFinderRepository;
 
-
 import javax.inject.Inject;
 
 /**

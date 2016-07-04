@@ -27,6 +27,7 @@ import javax.inject.Inject;
 /**
  * ThreadsPoolExecutor is the interactor's handler and has settings for the pool.
  * <p/> {@link ThreadPoolExecutor} is the Interactor executor implementation.<p/>
+ *
  * @author Raul Hernandez Lopez
  */
 public class ThreadsPoolExecutor implements InteractorExecutor {
