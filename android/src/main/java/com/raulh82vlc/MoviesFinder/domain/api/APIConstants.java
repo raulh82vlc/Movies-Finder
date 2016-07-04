@@ -22,7 +22,10 @@ package com.raulh82vlc.MoviesFinder.domain.api;
  */
 public final class APIConstants {
     // NOT FOR INSTANTIATION
-    private APIConstants() {}
+    private APIConstants() {
+
+    }
+
     // remote server address
     protected static String HOST_URL = "http://www.omdbapi.com";
 }

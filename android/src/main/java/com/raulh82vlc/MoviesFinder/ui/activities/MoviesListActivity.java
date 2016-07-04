@@ -63,7 +63,8 @@ public class MoviesListActivity extends BaseActivity {
         component().inject(this);
         ButterKnife.inject(this);
 
-        mMoviesListFragment = (MoviesListFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_movies_list);
+        mMoviesListFragment = (MoviesListFragment)
+                getSupportFragmentManager().findFragmentById(R.id.fragment_movies_list);
         setToolbarInitialisation();
         setInitialTitle();
     }
