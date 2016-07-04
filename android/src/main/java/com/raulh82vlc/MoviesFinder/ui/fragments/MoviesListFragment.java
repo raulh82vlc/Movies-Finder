@@ -52,7 +52,8 @@ import butterknife.InjectView;
  *
  * @author Raul Hernandez Lopez
  */
-public class MoviesListFragment extends BaseFragment implements MoviesListPresenter.View, MoviesListAdapter.OnItemClickListener {
+public class MoviesListFragment extends BaseFragment implements
+        MoviesListPresenter.View, MoviesListAdapter.OnItemClickListener {
 
     private static final String TAG = MoviesListFragment.class.getSimpleName();
 

@@ -99,11 +99,13 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
     // Data structures
     private MovieFromListUI mMovie;
 
-    public static void navigateToDetailsActivity(AppCompatActivity activity, MovieFromListUI movieFromListUI, View view) {
+    public static void navigateToDetailsActivity(AppCompatActivity activity,
+                                                 MovieFromListUI movieFromListUI, View view) {
         Intent intent = new Intent(activity, MovieDetailsActivity.class);
         intent.putExtra(MovieDetailsActivity.KEY_MOVIE, movieFromListUI);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(activity, view, IMG_TRANSITION_TAG);
+            ActivityOptionsCompat optionsCompat =
+                    ActivityOptionsCompat.makeSceneTransitionAnimation(activity, view, IMG_TRANSITION_TAG);
             ActivityCompat.startActivity(activity, intent, optionsCompat.toBundle());
         } else {
             activity.startActivity(intent);
@@ -112,12 +114,13 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
     }
 
     @Override
-    public boolean onNavigateUp () {
+    public boolean onNavigateUp() {
         onBackPressed();
         return true;
     }
 
-    // There is not need for a component since there are not injections, but easily could be extended with Interactor of our domain
+    // There is not need for a component since there are not injections,
+    // but easily could be extended with Interactor of our domain
     private MovieDetailsComponent movieDetailsComponent;
     public MovieDetailsComponent component() {
         if (movieDetailsComponent == null) {
@@ -147,6 +150,7 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
             setMaterialEffect();
             getMoreDetails();
         }
+        setToolbarInitialisation();
     }
 
     private void getMoreDetails() {
@@ -190,13 +194,17 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
 
     @Override
     protected void setToolbarInitialisation() {
-        mToolbar.setNavigationIcon(R.drawable.ic_back);
+        //mToolbar.setNavigationIcon(R.drawable.ic_back);
         setSupportActionBar(mToolbar);
-        final ActionBar actionBar = getSupportActionBar();
 
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
