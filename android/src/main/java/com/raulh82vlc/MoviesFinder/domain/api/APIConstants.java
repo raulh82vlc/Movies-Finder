@@ -18,11 +18,14 @@ package com.raulh82vlc.MoviesFinder.domain.api;
 
 /**
  * Constants used in the API
+ *
  * @author Raul Hernandez Lopez
  */
 public final class APIConstants {
-    // NOT FOR INSTANTIATION
-    private APIConstants() {}
     // remote server address
     protected static String HOST_URL = "http://www.omdbapi.com";
+
+    // NOT FOR INSTANTIATION
+    private APIConstants() {
+    }
 }

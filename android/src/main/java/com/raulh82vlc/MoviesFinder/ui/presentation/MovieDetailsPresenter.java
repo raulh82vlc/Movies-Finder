@@ -29,6 +29,7 @@ public interface MovieDetailsPresenter extends Presenter {
 
     interface View {
         void loadMovieDetails(MovieUI recipe);
+
         void errorGettingMovieDetails(String error);
     }
 }

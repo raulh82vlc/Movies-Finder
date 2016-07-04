@@ -24,7 +24,7 @@ import butterknife.ButterKnife;
 
 /**
  * Logic for all fragments, injects and destroys view injections
- * <p/>
+ * <p>
  */
 public abstract class BaseFragment extends Fragment {
 

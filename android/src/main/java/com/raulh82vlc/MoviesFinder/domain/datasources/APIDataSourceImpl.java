@@ -23,10 +23,10 @@ import android.net.NetworkInfo;
 
 import com.raulh82vlc.MoviesFinder.R;
 import com.raulh82vlc.MoviesFinder.domain.api.WebServicesApiCallsImpl;
+import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException;
 import com.raulh82vlc.MoviesFinder.domain.models.Movie;
 import com.raulh82vlc.MoviesFinder.domain.models.SearchJSONResults;
 import com.raulh82vlc.MoviesFinder.domain.repository.datasources.APIDataSource;
-import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException;
 
 import javax.inject.Inject;
 

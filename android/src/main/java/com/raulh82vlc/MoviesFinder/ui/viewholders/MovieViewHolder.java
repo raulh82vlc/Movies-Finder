@@ -27,8 +27,8 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 /**
- *
  * Movie Item View Holder
+ *
  * @author Raul Hernandez Lopez
  */
 

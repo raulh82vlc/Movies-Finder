@@ -30,12 +30,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.raulh82vlc.MoviesFinder.R;
+import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException;
 import com.raulh82vlc.MoviesFinder.domain.models.MovieFromListUI;
 import com.raulh82vlc.MoviesFinder.ui.activities.MovieDetailsActivity;
 import com.raulh82vlc.MoviesFinder.ui.activities.MoviesListActivity;
 import com.raulh82vlc.MoviesFinder.ui.adapters.MoviesListAdapter;
 import com.raulh82vlc.MoviesFinder.ui.presentation.MoviesListPresenter;
-import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException;
 import com.raulh82vlc.MoviesFinder.ui.utils.ImageRendering;
 
 import java.util.ArrayList;

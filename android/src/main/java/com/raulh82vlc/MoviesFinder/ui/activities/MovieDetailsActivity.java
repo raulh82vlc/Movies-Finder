@@ -20,7 +20,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -36,11 +35,11 @@ import android.widget.Toast;
 
 import com.raulh82vlc.MoviesFinder.MoviesFinderApp;
 import com.raulh82vlc.MoviesFinder.R;
+import com.raulh82vlc.MoviesFinder.di.components.DaggerMovieDetailsComponent;
 import com.raulh82vlc.MoviesFinder.di.components.MovieDetailsComponent;
 import com.raulh82vlc.MoviesFinder.di.modules.ActivityModule;
 import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException;
 import com.raulh82vlc.MoviesFinder.domain.models.MovieFromListUI;
-import com.raulh82vlc.MoviesFinder.di.components.DaggerMovieDetailsComponent;
 import com.raulh82vlc.MoviesFinder.domain.models.MovieUI;
 import com.raulh82vlc.MoviesFinder.ui.presentation.MovieDetailsPresenter;
 import com.raulh82vlc.MoviesFinder.ui.utils.ImageRendering;
@@ -57,6 +56,10 @@ import butterknife.InjectView;
  * @author Raul Hernandez Lopez
  */
 public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPresenter.View {
+    protected final static String KEY_MOVIE = "MovieImage";
+    // CONSTANTS
+    private static final String TAG = MovieDetailsActivity.class.getSimpleName();
+    private final static String IMG_TRANSITION_TAG = "activitycompat_transition_by_img";
     // UI Injections
     @InjectView(R.id.title_txt)
     TextView mTitleTxt;
@@ -84,20 +87,15 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
     ImageView mMainImageView;
     @InjectView(R.id.collapsing_toolbar)
     CollapsingToolbarLayout mCollapsingToolbar;
-
     // DI
     @Inject
     ImageRendering imageRendering;
     @Inject
     MovieDetailsPresenter presenter;
-
-    // CONSTANTS
-    private static final String TAG = MovieDetailsActivity.class.getSimpleName();
-    protected final static String KEY_MOVIE = "MovieImage";
-    private final static String IMG_TRANSITION_TAG = "activitycompat_transition_by_img";
-
     // Data structures
     private MovieFromListUI mMovie;
+    // There is not need for a component since there are not injections, but easily could be extended with Interactor of our domain
+    private MovieDetailsComponent movieDetailsComponent;
 
     public static void navigateToDetailsActivity(AppCompatActivity activity, MovieFromListUI movieFromListUI, View view) {
         Intent intent = new Intent(activity, MovieDetailsActivity.class);
@@ -112,13 +110,11 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
     }
 
     @Override
-    public boolean onNavigateUp () {
+    public boolean onNavigateUp() {
         onBackPressed();
         return true;
     }
 
-    // There is not need for a component since there are not injections, but easily could be extended with Interactor of our domain
-    private MovieDetailsComponent movieDetailsComponent;
     public MovieDetailsComponent component() {
         if (movieDetailsComponent == null) {
             movieDetailsComponent = DaggerMovieDetailsComponent.builder()
@@ -171,7 +167,6 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
     /**
      * <p>Sets transition and from which view
      * postpone the start until is indicated</p>
-     *
      **/
     private void setMaterialEffect() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

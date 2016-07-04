@@ -30,12 +30,14 @@ public interface APIDataSource {
 
     /**
      * Gets a Search results with movies list from the API
+     *
      * @param query user query
      */
     SearchJSONResults getMoviesList(String query) throws InternetConnectionException;
 
     /**
      * Gets a Movie from the API
+     *
      * @param id identifier of the movie
      */
     Movie getMovieDetail(String id) throws InternetConnectionException;

@@ -21,7 +21,6 @@ import com.raulh82vlc.MoviesFinder.domain.models.MovieFromListUI;
 import java.util.List;
 
 /**
- *
  * Responsible of passing Movies List result to the View
  *
  * @author Raul Hernandez Lopez
@@ -32,6 +31,7 @@ public interface MoviesListPresenter extends Presenter {
 
     interface View {
         void loadedMoviesList(List<MovieFromListUI> catsList);
+
         void errorGettingMoviesList(String error);
     }
 }

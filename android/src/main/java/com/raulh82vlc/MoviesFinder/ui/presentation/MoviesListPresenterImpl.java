@@ -19,8 +19,8 @@ package com.raulh82vlc.MoviesFinder.ui.presentation;
 import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException;
 import com.raulh82vlc.MoviesFinder.domain.interactors.GetMoviesListInteractor;
 import com.raulh82vlc.MoviesFinder.domain.mapper.MoviesListModelDataMapper;
-import com.raulh82vlc.MoviesFinder.domain.models.SearchJSONResults;
 import com.raulh82vlc.MoviesFinder.domain.models.MovieFromListUI;
+import com.raulh82vlc.MoviesFinder.domain.models.SearchJSONResults;
 
 import java.util.List;
 
@@ -57,17 +57,17 @@ public class MoviesListPresenterImpl implements MoviesListPresenter {
         interactorGetMoviesList.execute(
                 query,
                 new GetMoviesListInteractor.GetMoviesListCallback() {
-            @Override
-            public void onGetMoviesListOK(SearchJSONResults searchJSONResults) {
-                final List<MovieFromListUI> catsList = moviesListModelDataMapper.transform(searchJSONResults);
-                view.loadedMoviesList(catsList);
-            }
+                    @Override
+                    public void onGetMoviesListOK(SearchJSONResults searchJSONResults) {
+                        final List<MovieFromListUI> catsList = moviesListModelDataMapper.transform(searchJSONResults);
+                        view.loadedMoviesList(catsList);
+                    }
 
-            @Override
-            public void onGetMoviesListKO(String error) {
-                view.errorGettingMoviesList(error);
-            }
-        });
+                    @Override
+                    public void onGetMoviesListKO(String error) {
+                        view.errorGettingMoviesList(error);
+                    }
+                });
     }
 
     @Override

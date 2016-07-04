@@ -16,10 +16,10 @@
 
 package com.raulh82vlc.MoviesFinder.domain.repository;
 
-import com.raulh82vlc.MoviesFinder.domain.repository.datasources.APIDataSource;
 import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException;
 import com.raulh82vlc.MoviesFinder.domain.models.Movie;
 import com.raulh82vlc.MoviesFinder.domain.models.SearchJSONResults;
+import com.raulh82vlc.MoviesFinder.domain.repository.datasources.APIDataSource;
 
 import javax.inject.Inject;
 

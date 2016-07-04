@@ -47,5 +47,7 @@ public class ActivityModule {
 
     @Provides
     @ActivityScope
-    ImageRendering provideImageRendering(ImageRenderingImpl imageRendering) { return imageRendering; }
+    ImageRendering provideImageRendering(ImageRenderingImpl imageRendering) {
+        return imageRendering;
+    }
 }

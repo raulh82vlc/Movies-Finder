@@ -16,11 +16,11 @@
 
 package com.raulh82vlc.MoviesFinder.di.components;
 
+import com.raulh82vlc.MoviesFinder.di.modules.ActivityModule;
 import com.raulh82vlc.MoviesFinder.di.modules.MoviesListModule;
 import com.raulh82vlc.MoviesFinder.di.modules.RepositoryModule;
-import com.raulh82vlc.MoviesFinder.ui.activities.MoviesListActivity;
 import com.raulh82vlc.MoviesFinder.di.scopes.ActivityScope;
-import com.raulh82vlc.MoviesFinder.di.modules.ActivityModule;
+import com.raulh82vlc.MoviesFinder.ui.activities.MoviesListActivity;
 import com.raulh82vlc.MoviesFinder.ui.fragments.MoviesListFragment;
 
 import dagger.Component;

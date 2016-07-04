@@ -19,8 +19,8 @@ package com.raulh82vlc.MoviesFinder.di.modules;
 import com.raulh82vlc.MoviesFinder.di.scopes.ActivityScope;
 import com.raulh82vlc.MoviesFinder.domain.interactors.GetMoviesListInteractor;
 import com.raulh82vlc.MoviesFinder.domain.interactors.GetMoviesListInteractorImpl;
-import com.raulh82vlc.MoviesFinder.ui.presentation.MoviesListPresenterImpl;
 import com.raulh82vlc.MoviesFinder.ui.presentation.MoviesListPresenter;
+import com.raulh82vlc.MoviesFinder.ui.presentation.MoviesListPresenterImpl;
 
 import dagger.Module;
 import dagger.Provides;
