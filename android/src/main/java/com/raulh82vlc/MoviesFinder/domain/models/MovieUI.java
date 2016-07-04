@@ -10,12 +10,12 @@ public class MovieUI {
     private String synopsis, rating, votes, actors;
     private String awards, director, duration, writer, ratedForQualifiedPublic;
 
-    public void setSynopsis(String synopsis) {
-        this.synopsis = synopsis;
-    }
-
     public String getSynopsis() {
         return synopsis;
+    }
+
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
     }
 
     public String getRating() {
@@ -26,59 +26,59 @@ public class MovieUI {
         this.rating = rating;
     }
 
-    public void setVotes(String votes) {
-        this.votes = votes;
-    }
-
     public String getVotes() {
         return votes;
     }
 
-    public void setActors(String actors) {
-        this.actors = actors;
+    public void setVotes(String votes) {
+        this.votes = votes;
     }
 
     public String getActors() {
         return actors;
     }
 
-    public void setAwards(String awards) {
-        this.awards = awards;
-    }
-
-    public void setDirector(String tDirector) {
-        this.director = tDirector;
+    public void setActors(String actors) {
+        this.actors = actors;
     }
 
     public String getDirector() {
         return director;
     }
 
+    public void setDirector(String tDirector) {
+        this.director = tDirector;
+    }
+
     public String getAwards() {
         return awards;
     }
 
-    public void setDuration(String duration) {
-        this.duration = duration;
+    public void setAwards(String awards) {
+        this.awards = awards;
     }
 
     public String getDuration() {
         return duration;
     }
 
-    public void setWriter(String writer) {
-        this.writer = writer;
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
     public String getWriter() {
         return writer;
     }
 
-    public void setRatedForQualifiedPublic(String ratedForQualifiedPublic) {
-        this.ratedForQualifiedPublic = ratedForQualifiedPublic;
+    public void setWriter(String writer) {
+        this.writer = writer;
     }
 
     public String getRatedForQualifiedPublic() {
         return ratedForQualifiedPublic;
+    }
+
+    public void setRatedForQualifiedPublic(String ratedForQualifiedPublic) {
+        this.ratedForQualifiedPublic = ratedForQualifiedPublic;
     }
 }

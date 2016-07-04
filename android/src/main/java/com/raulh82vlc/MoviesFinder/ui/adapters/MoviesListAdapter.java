@@ -23,9 +23,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.raulh82vlc.MoviesFinder.R;
+import com.raulh82vlc.MoviesFinder.domain.models.MovieFromListUI;
 import com.raulh82vlc.MoviesFinder.ui.utils.ImageRendering;
 import com.raulh82vlc.MoviesFinder.ui.viewholders.MovieViewHolder;
-import com.raulh82vlc.MoviesFinder.domain.models.MovieFromListUI;
 
 import java.util.List;
 
@@ -39,12 +39,6 @@ public class MoviesListAdapter extends RecyclerView.Adapter<MovieViewHolder> {
     private List<MovieFromListUI> mMovies;
 
     private ImageRendering mImageLoader;
-
-    public MoviesListAdapter(ImageRendering imageLoader, List<MovieFromListUI> movies) {
-        mImageLoader = imageLoader;
-        mMovies = movies;
-    }
-
     private View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(final View view) {
@@ -58,6 +52,11 @@ public class MoviesListAdapter extends RecyclerView.Adapter<MovieViewHolder> {
             }
         }
     };
+
+    public MoviesListAdapter(ImageRendering imageLoader, List<MovieFromListUI> movies) {
+        mImageLoader = imageLoader;
+        mMovies = movies;
+    }
 
     @Override
     public MovieViewHolder onCreateViewHolder(ViewGroup parent, int i) {

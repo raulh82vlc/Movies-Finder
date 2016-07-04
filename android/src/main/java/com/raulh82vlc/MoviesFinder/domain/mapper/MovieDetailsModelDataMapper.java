@@ -8,6 +8,7 @@ import javax.inject.Inject;
 
 /**
  * Mapper conversion from Movie model of the API to Movie model of the UI
+ *
  * @author Raul Hernandez Lopez
  */
 @ActivityScope

@@ -16,13 +16,13 @@
 
 package com.raulh82vlc.MoviesFinder.di.modules;
 
+import com.raulh82vlc.MoviesFinder.di.scopes.ActivityScope;
 import com.raulh82vlc.MoviesFinder.domain.api.WebServicesApiCalls;
 import com.raulh82vlc.MoviesFinder.domain.api.WebServicesApiCallsImpl;
-import com.raulh82vlc.MoviesFinder.domain.repository.MoviesFinderRepositoryImpl;
-import com.raulh82vlc.MoviesFinder.domain.repository.datasources.APIDataSource;
-import com.raulh82vlc.MoviesFinder.di.scopes.ActivityScope;
 import com.raulh82vlc.MoviesFinder.domain.datasources.APIDataSourceImpl;
 import com.raulh82vlc.MoviesFinder.domain.repository.MoviesFinderRepository;
+import com.raulh82vlc.MoviesFinder.domain.repository.MoviesFinderRepositoryImpl;
+import com.raulh82vlc.MoviesFinder.domain.repository.datasources.APIDataSource;
 
 import dagger.Module;
 import dagger.Provides;

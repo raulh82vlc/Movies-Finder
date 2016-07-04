@@ -18,8 +18,8 @@ package com.raulh82vlc.MoviesFinder.di.components;
 
 import android.app.Activity;
 
-import com.raulh82vlc.MoviesFinder.di.scopes.ActivityScope;
 import com.raulh82vlc.MoviesFinder.di.modules.ActivityModule;
+import com.raulh82vlc.MoviesFinder.di.scopes.ActivityScope;
 
 import dagger.Component;
 
@@ -28,7 +28,7 @@ import dagger.Component;
  * to the activity context will depend or extend this one.
  * Those which are lifecycles or mainly common dependencies linked to activity context
  * would be the kind of dependencies were are talking about.
- * <p/>
+ * <p>
  * Activity-level components should extend this component.
  * Fragment components may depend on this component.
  *

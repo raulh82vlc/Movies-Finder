@@ -17,8 +17,8 @@
 package com.raulh82vlc.MoviesFinder.domain.mapper;
 
 import com.raulh82vlc.MoviesFinder.di.scopes.ActivityScope;
-import com.raulh82vlc.MoviesFinder.domain.models.SearchJSONResults;
 import com.raulh82vlc.MoviesFinder.domain.models.MovieFromListUI;
+import com.raulh82vlc.MoviesFinder.domain.models.SearchJSONResults;
 
 import java.util.ArrayList;
 import java.util.Collections;

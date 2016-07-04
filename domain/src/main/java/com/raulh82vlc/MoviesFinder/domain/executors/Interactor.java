@@ -20,11 +20,12 @@ import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException
 /**
  * Use case or Interactor, each thread or action
  * is taken in a use case, what means an interactor
- * <p/>
+ * <p>
  * This is a contract of the interactor, but
  * concrete logic will be done through its
  * use case (specific interactor implementation)
- * <p/>
+ * <p>
+ *
  * @author Raul Hernandez Lopez
  */
 public interface Interactor {

@@ -19,8 +19,8 @@ package com.raulh82vlc.MoviesFinder;
 import android.app.Application;
 
 import com.raulh82vlc.MoviesFinder.di.components.ApplicationComponent;
-import com.raulh82vlc.MoviesFinder.di.modules.ApplicationModule;
 import com.raulh82vlc.MoviesFinder.di.components.DaggerApplicationComponent;
+import com.raulh82vlc.MoviesFinder.di.modules.ApplicationModule;
 
 /**
  * {@link ApplicationComponent} could be used to provide dependencies needed by the whole app

@@ -25,11 +25,11 @@ import android.support.v7.widget.SearchView;
 import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
 
-import com.raulh82vlc.MoviesFinder.R;
 import com.raulh82vlc.MoviesFinder.MoviesFinderApp;
+import com.raulh82vlc.MoviesFinder.R;
+import com.raulh82vlc.MoviesFinder.di.components.DaggerMoviesListComponent;
 import com.raulh82vlc.MoviesFinder.di.components.MoviesListComponent;
 import com.raulh82vlc.MoviesFinder.di.modules.ActivityModule;
-import com.raulh82vlc.MoviesFinder.di.components.DaggerMoviesListComponent;
 import com.raulh82vlc.MoviesFinder.ui.fragments.MoviesListFragment;
 
 import butterknife.ButterKnife;

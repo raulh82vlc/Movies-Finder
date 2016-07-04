@@ -26,6 +26,17 @@ import android.os.Parcelable;
  */
 public class MovieFromListUI implements Parcelable {
 
+    public static final Creator<MovieFromListUI> CREATOR = new Creator<MovieFromListUI>() {
+        @Override
+        public MovieFromListUI createFromParcel(Parcel in) {
+            return new MovieFromListUI(in);
+        }
+
+        @Override
+        public MovieFromListUI[] newArray(int size) {
+            return new MovieFromListUI[size];
+        }
+    };
     private String title;
     private String year;
     private String url;
@@ -40,18 +51,6 @@ public class MovieFromListUI implements Parcelable {
         url = in.readString();
         imdbId = in.readString();
     }
-
-    public static final Creator<MovieFromListUI> CREATOR = new Creator<MovieFromListUI>() {
-        @Override
-        public MovieFromListUI createFromParcel(Parcel in) {
-            return new MovieFromListUI(in);
-        }
-
-        @Override
-        public MovieFromListUI[] newArray(int size) {
-            return new MovieFromListUI[size];
-        }
-    };
 
     public String getTitle() {
         return title;
@@ -69,10 +68,6 @@ public class MovieFromListUI implements Parcelable {
         this.url = url;
     }
 
-    public void setImdbId(String imdbId) {
-        this.imdbId = imdbId;
-    }
-
     public String getYear() {
         return year;
     }
@@ -83,6 +78,10 @@ public class MovieFromListUI implements Parcelable {
 
     public String getImdbId() {
         return imdbId;
+    }
+
+    public void setImdbId(String imdbId) {
+        this.imdbId = imdbId;
     }
 
     @Override

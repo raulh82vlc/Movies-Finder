@@ -16,11 +16,11 @@
 
 package com.raulh82vlc.MoviesFinder.ui.presentation;
 
+import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException;
+import com.raulh82vlc.MoviesFinder.domain.interactors.GetMovieDetailsInteractor;
 import com.raulh82vlc.MoviesFinder.domain.mapper.MovieDetailsModelDataMapper;
 import com.raulh82vlc.MoviesFinder.domain.models.Movie;
 import com.raulh82vlc.MoviesFinder.domain.models.MovieUI;
-import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException;
-import com.raulh82vlc.MoviesFinder.domain.interactors.GetMovieDetailsInteractor;
 
 import javax.inject.Inject;
 

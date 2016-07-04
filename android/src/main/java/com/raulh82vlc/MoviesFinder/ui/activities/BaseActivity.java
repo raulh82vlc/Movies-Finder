@@ -29,15 +29,15 @@ import butterknife.Optional;
 
 /**
  * Base Activity for all Activities
+ *
  * @author Raul Hernandez Lopez
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
-    private ProgressDialog mDialog;
-
     @Optional
     @InjectView(R.id.toolbar)
     protected Toolbar mToolbar;
+    private ProgressDialog mDialog;
 
     protected abstract void setInitialTitle();
 

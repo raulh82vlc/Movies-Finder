@@ -17,7 +17,8 @@ package com.raulh82vlc.MoviesFinder.domain.executors;
 
 /**
  * This contract allows the interactor callbacks to be executed through the main UI thread.
- * <p/>
+ * <p>
+ *
  * @author Raul Hernandez Lopez
  */
 public interface MainThread {
