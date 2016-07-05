@@ -191,20 +191,12 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
 
     @Override
     protected void setToolbarInitialisation() {
-        //mToolbar.setNavigationIcon(R.drawable.ic_back);
         setSupportActionBar(mToolbar);
-
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setHomeButtonEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeButtonEnabled(true);
         }
-
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
     }
 
     @Override
