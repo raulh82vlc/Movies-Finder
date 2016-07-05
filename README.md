@@ -37,10 +37,6 @@ image and title if found any
 PEG, year, ranking, votes, etc
 - A secret link is hidden after the *Author* field of every specific item (it launches a link)
 
-### Limitations
-- For some unexpected reason the material design library 23.2.1 is hidden the back arrow button,
-at the detail view. However, by clicking back button from your mobile you will achieve the same action.
-
 ### SDK support
 Support SDKs from **15** to **23**
 
