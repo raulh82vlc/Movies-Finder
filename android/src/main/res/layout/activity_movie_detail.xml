@@ -18,7 +18,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar_layout"
@@ -34,13 +35,15 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginStart="@dimen/margin_start_collapse_toolbar"
-            app:expandedTitleMarginEnd="@dimen/margin_end_collapse_toolbar">
+            app:expandedTitleMarginEnd="@dimen/margin_end_collapse_toolbar"
+            android:fitsSystemWindows="true">
 
             <ImageView
                 android:id="@+id/main_image_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="@dimen/height_large_image"
+                android:fitsSystemWindows="true"
                 app:layout_collapseMode="parallax" />
 
             <android.support.v7.widget.Toolbar
