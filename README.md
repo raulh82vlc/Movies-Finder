@@ -59,6 +59,14 @@ Support SDKs from **15** to **23**
 - [@RaulHernandezL (Twitter)](https://twitter.com/RaulHernandezL)
 - [raul.h82@gmail.com](mailto:raul.h82@gmail.com)
 
+### Contributions
+Please read first [CONTRIBUTING](./CONTRIBUTING.md)
+
+### Contributors
+- Raul Hernandez Lopez (@raulh82vlc)
+- Manu Lorenzo (@noloman)
+- Jose Del Pozo (@josedlpozo)
+
 # License
 ```
 Copyright (C) 2016 Raul Hernandez Lopez
