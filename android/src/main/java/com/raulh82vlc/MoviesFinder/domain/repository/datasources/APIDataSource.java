@@ -18,27 +18,25 @@ package com.raulh82vlc.MoviesFinder.domain.repository.datasources;
 
 
 import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException;
-import com.raulh82vlc.MoviesFinder.domain.models.Movie;
-import com.raulh82vlc.MoviesFinder.domain.models.SearchJSONResults;
 
 /**
  * <p>Source of retrieving info from the API</p>
  *
  * @author Raul Hernandez Lopez
  */
-public interface APIDataSource {
+public interface APIDataSource<L, M> {
 
     /**
      * Gets a Search results with movies list from the API
      *
      * @param query user query
      */
-    SearchJSONResults getMoviesList(String query) throws InternetConnectionException;
+    L getMoviesList(String query) throws InternetConnectionException;
 
     /**
      * Gets a Movie from the API
      *
      * @param id identifier of the movie
      */
-    Movie getMovieDetail(String id) throws InternetConnectionException;
+    M getMovieDetail(String id) throws InternetConnectionException;
 }

@@ -30,7 +30,7 @@ public interface MoviesListPresenter extends Presenter {
     void setView(View view);
 
     interface View {
-        void loadedMoviesList(List<MovieFromListUI> catsList);
+        void loadedMoviesList(List<MovieFromListUI> moviesList);
 
         void errorGettingMoviesList(String error);
     }

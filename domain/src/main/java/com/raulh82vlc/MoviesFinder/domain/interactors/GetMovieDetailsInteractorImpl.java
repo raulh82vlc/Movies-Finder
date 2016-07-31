@@ -35,7 +35,7 @@ public class GetMovieDetailsInteractorImpl implements GetMovieDetailsInteractor,
     private InteractorExecutor executor;
     private MainThread mainThread;
     private MoviesFinderRepository repository;
-    private MoviDetailsCallback callback;
+    private MovieDetailsCallback callback;
     private String id;
 
     @Inject
@@ -48,7 +48,7 @@ public class GetMovieDetailsInteractorImpl implements GetMovieDetailsInteractor,
     }
 
     @Override
-    public void execute(String id, MoviDetailsCallback callback) {
+    public void execute(String id, MovieDetailsCallback callback) {
         this.id = id;
         this.callback = callback;
         try {
@@ -62,7 +62,7 @@ public class GetMovieDetailsInteractorImpl implements GetMovieDetailsInteractor,
     public void run() throws InternetConnectionException {
         String errorMessage = "no listing from network";
         try {
-            Movie movie = repository.getMovie(id);
+            Movie movie = (Movie) repository.getMovie(id);
             if (movie != null) {
                 notifyMovieDetailProcessed(movie);
             } else {

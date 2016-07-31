@@ -28,9 +28,9 @@ import javax.inject.Inject;
  *
  * @author Raul Hernandez Lopez
  */
-public class MoviesFinderRepositoryImpl implements MoviesFinderRepository {
+public class MoviesFinderRepositoryImpl implements MoviesFinderRepository<SearchJSONResults, Movie> {
 
-    private APIDataSource apiDataSource;
+    private APIDataSource<SearchJSONResults, Movie> apiDataSource;
 
     @Inject
     MoviesFinderRepositoryImpl(APIDataSource apiDataSource) {

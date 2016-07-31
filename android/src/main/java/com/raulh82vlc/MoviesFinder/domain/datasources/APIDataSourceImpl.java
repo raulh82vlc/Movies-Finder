@@ -37,7 +37,7 @@ import retrofit.RetrofitError;
  *
  * @author Raul Hernandez Lopez
  */
-public class APIDataSourceImpl implements APIDataSource {
+public class APIDataSourceImpl implements APIDataSource<SearchJSONResults, Movie> {
 
     /**
      * Vars declaration
@@ -65,7 +65,7 @@ public class APIDataSourceImpl implements APIDataSource {
     /**
      * Starts Movies List Request
      *
-     * @return List of {@link Movie}
+     * @return List of movies
      * @throws InternetConnectionException
      */
     private Movie startMovieRequest(String id) throws InternetConnectionException {

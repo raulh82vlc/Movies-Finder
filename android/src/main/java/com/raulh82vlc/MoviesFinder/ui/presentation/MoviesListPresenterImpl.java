@@ -59,8 +59,8 @@ public class MoviesListPresenterImpl implements MoviesListPresenter {
                 new GetMoviesListInteractor.GetMoviesListCallback() {
                     @Override
                     public void onGetMoviesListOK(SearchJSONResults searchJSONResults) {
-                        final List<MovieFromListUI> catsList = moviesListModelDataMapper.transform(searchJSONResults);
-                        view.loadedMoviesList(catsList);
+                        final List<MovieFromListUI> moviesList = moviesListModelDataMapper.transform(searchJSONResults);
+                        view.loadedMoviesList(moviesList);
                     }
 
                     @Override
