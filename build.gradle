@@ -27,7 +27,7 @@ allprojects {
     ext {
         // Android config
         androidCompileSdkVersion = 23
-        androidBuildToolsVersion = "23.0.1"
+        androidBuildToolsVersion = "23.0.2"
         androidMinSdkVersion = 15
         androidTargetSdkVersion = 23
         androidApplicationId = 'com.raulh82vlc.MoviesFinder'
