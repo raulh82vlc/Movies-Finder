@@ -57,9 +57,9 @@ public class GetMoviesListInteractorImpl implements GetMoviesListInteractor, Int
     public void run() throws InternetConnectionException {
         String errorMessage = "no listing from network";
         try {
-            SearchJSONResults recipesList = repository.getMoviesList(query);
-            if (recipesList != null) {
-                notifySuccessfullyLoaded(recipesList);
+            SearchJSONResults moviesList = (SearchJSONResults) repository.getMoviesList(query);
+            if (moviesList != null) {
+                notifySuccessfullyLoaded(moviesList);
             } else {
                 notifyError(errorMessage);
             }

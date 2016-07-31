@@ -25,9 +25,9 @@ import com.raulh82vlc.MoviesFinder.domain.models.Movie;
  */
 public interface GetMovieDetailsInteractor {
 
-    void execute(String id, MoviDetailsCallback callback);
+    void execute(String id, MovieDetailsCallback callback);
 
-    interface MoviDetailsCallback {
+    interface MovieDetailsCallback {
         void onGetMovieDetailOK(Movie movie);
 
         void onGetMovieDetailKO(String error);

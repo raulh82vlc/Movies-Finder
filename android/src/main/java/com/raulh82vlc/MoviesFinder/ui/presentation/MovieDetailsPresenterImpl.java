@@ -32,14 +32,14 @@ import javax.inject.Inject;
 public class MovieDetailsPresenterImpl implements MovieDetailsPresenter {
 
     private final GetMovieDetailsInteractor interactor;
-    private final MovieDetailsModelDataMapper recipesListModelDataMapper;
+    private final MovieDetailsModelDataMapper moviesListModelDataMapper;
     private View view;
 
     @Inject
     MovieDetailsPresenterImpl(
             GetMovieDetailsInteractor interactor,
-            MovieDetailsModelDataMapper recipesListModelDataMapper) {
-        this.recipesListModelDataMapper = recipesListModelDataMapper;
+            MovieDetailsModelDataMapper moviesListModelDataMapper) {
+        this.moviesListModelDataMapper = moviesListModelDataMapper;
         this.interactor = interactor;
     }
 
@@ -52,10 +52,10 @@ public class MovieDetailsPresenterImpl implements MovieDetailsPresenter {
     }
 
     private void startMovieDetailRequest(String id) {
-        interactor.execute(id, new GetMovieDetailsInteractor.MoviDetailsCallback() {
+        interactor.execute(id, new GetMovieDetailsInteractor.MovieDetailsCallback() {
             @Override
             public void onGetMovieDetailOK(Movie movie) {
-                final MovieUI movieUI = recipesListModelDataMapper.transform(movie);
+                final MovieUI movieUI = moviesListModelDataMapper.transform(movie);
                 view.loadMovieDetails(movieUI);
             }
 

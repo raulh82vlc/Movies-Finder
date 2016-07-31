@@ -16,7 +16,6 @@
 
 package com.raulh82vlc.MoviesFinder.domain.api;
 
-
 import com.raulh82vlc.MoviesFinder.domain.models.Movie;
 import com.raulh82vlc.MoviesFinder.domain.models.SearchJSONResults;
 
@@ -29,7 +28,7 @@ import retrofit.RestAdapter;
  *
  * @author Raul Hernandez Lopez
  */
-public class WebServicesApiCallsImpl implements WebServicesApiCalls {
+public class WebServicesApiCallsImpl implements WebServicesApiCalls<SearchJSONResults, Movie> {
 
     private APIInterface mAPIInterface;
 

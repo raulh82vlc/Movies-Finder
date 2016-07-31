@@ -17,23 +17,21 @@ package com.raulh82vlc.MoviesFinder.domain.repository;
 
 
 import com.raulh82vlc.MoviesFinder.domain.exceptions.InternetConnectionException;
-import com.raulh82vlc.MoviesFinder.domain.models.Movie;
-import com.raulh82vlc.MoviesFinder.domain.models.SearchJSONResults;
 
 /**
  * Repository contract
  *
  * @author Raul Hernandez Lopez
  */
-public interface MoviesFinderRepository {
+public interface MoviesFinderRepository<L, M> {
 
     /**
      * to get the List of
      **/
-    SearchJSONResults getMoviesList(String q) throws InternetConnectionException;
+    L getMoviesList(String q) throws InternetConnectionException;
 
     /**
-     * to get Recipe detail
+     * to get Movie detail
      **/
-    Movie getMovie(String id) throws InternetConnectionException;
+    M getMovie(String id) throws InternetConnectionException;
 }
