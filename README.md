@@ -1,4 +1,4 @@
-# Movies Finder
+# Movies Finder[![Build Status](https://travis-ci.org/raulh82vlc/Movies-Finder.svg?branch=master)](https://travis-ci.org/raulh82vlc/Movies-Finder)
 Movies Finder in combination with Material design can be aligned with *Clean architecture* by means of *Model-View-Presenter (MVP)*.
 
 ## Overview
