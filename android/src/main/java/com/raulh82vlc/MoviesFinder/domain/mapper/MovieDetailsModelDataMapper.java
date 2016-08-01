@@ -23,6 +23,9 @@ public class MovieDetailsModelDataMapper {
      * Transforms a {@link Movie} into an {@link MovieUI}.
      */
     public MovieUI transform(Movie movie) {
+        if (movie == null) {
+            throw new IllegalArgumentException("Cannot transform a null value");
+        }
         MovieUI movieUI = new MovieUI();
         movieUI.setSynopsis(movie.getSynopsis());
         movieUI.setVotes(movie.getNumVotes());
