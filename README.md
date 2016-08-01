@@ -45,6 +45,7 @@ Support SDKs from **15** to **23**
 - [Dagger 2](http://google.github.io/dagger) for Dependency Injection
 - [ButterKnife](http://jakewharton.github.io/butterknife) v6.1.0 for Views Injection
 - [Retrofit](http://square.github.io/retrofit) v1.6.1 for API requests
+- [Gson](https://github.com/google/gson/blob/master/UserGuide.md) v2.2.4 for Json parsing
 - [Glide](https://github.com/bumptech/glide) v3.6.0 for Image rendering
 
 # References (special thanks)
