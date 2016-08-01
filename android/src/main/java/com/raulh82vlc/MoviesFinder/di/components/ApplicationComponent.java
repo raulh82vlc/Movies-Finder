@@ -32,7 +32,7 @@ import dagger.Component;
  * It provides generic dependencies such as
  * {@link MainThread} or {@link InteractorExecutor}
  * and makes them available to sub-components and other external dependant classes.
- * <p>
+ * <p/>
  * Scope {@link Singleton} is used to limit dependency instances across whole execution.
  *
  * @author Raul Hernandez Lopez

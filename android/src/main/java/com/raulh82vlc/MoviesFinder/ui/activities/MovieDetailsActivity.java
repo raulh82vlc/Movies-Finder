@@ -94,14 +94,17 @@ public class MovieDetailsActivity extends BaseActivity implements MovieDetailsPr
     MovieDetailsPresenter presenter;
     // Data structures
     private MovieFromListUI mMovie;
-    // There is not need for a component since there are not injections, but easily could be extended with Interactor of our domain
+    // There is not need for a component since there are not injections, but easily could be extended
+    // with Interactor of our domain
     private MovieDetailsComponent movieDetailsComponent;
 
-    public static void navigateToDetailsActivity(AppCompatActivity activity, MovieFromListUI movieFromListUI, View view) {
+    public static void navigateToDetailsActivity(AppCompatActivity activity, MovieFromListUI movieFromListUI,
+                                                 View view) {
         Intent intent = new Intent(activity, MovieDetailsActivity.class);
         intent.putExtra(MovieDetailsActivity.KEY_MOVIE, movieFromListUI);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(activity, view, IMG_TRANSITION_TAG);
+            ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(activity,
+                    view, IMG_TRANSITION_TAG);
             ActivityCompat.startActivity(activity, intent, optionsCompat.toBundle());
         } else {
             activity.startActivity(intent);
