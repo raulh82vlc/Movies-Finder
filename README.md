@@ -65,7 +65,6 @@ Please read first [CONTRIBUTING](./CONTRIBUTING.md)
 
 ### Contributors
 - Raul Hernandez Lopez (@raulh82vlc)
-- Manu Lorenzo (@noloman)
 - Jose Del Pozo (@josedlpozo)
 
 # License
